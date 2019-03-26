@@ -8,3 +8,7 @@ exports.spotify = {
 exports.bandsintown = {
   key: process.env.bandsInTownKey
 };
+
+exports.omdb = {
+  key: process.env.omdbKey
+};
