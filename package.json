@@ -1,22 +1,8 @@
 {
-  "name": "homework-8-LIRI",
+  "name": "homework-8-take-3",
   "version": "1.0.0",
-  "description": "Language Interpretation and Recognition Interface",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/neagtivefriction/Homework-8-LIRI.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/neagtivefriction/Homework-8-LIRI/issues"
-  },
-  "homepage": "https://github.com/neagtivefriction/Homework-8-LIRI#readme",
+  "description": "",
+  "main": "key.js",
   "dependencies": {
     "axios": "^0.18.0",
     "bandsintown": "^1.0.1",
@@ -24,5 +10,20 @@
     "moment": "^2.24.0",
     "node-spotify-api": "^1.0.7",
     "omdbapi": "^3.0.0"
-  }
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neagtivefriction/homework-8-take-3.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/neagtivefriction/homework-8-take-3/issues"
+  },
+  "homepage": "https://github.com/neagtivefriction/homework-8-take-3#readme"
 }
