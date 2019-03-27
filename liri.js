@@ -2,15 +2,11 @@ require("dotenv").config();
 fs = require("fs");
 var Spotify = require("node-spotify-api");
 var axios = require("axios");
-// var OMDB = require("omdbapi");
-// var bandsInTown = require("bandsintown");
 moment = require("moment");
 var keys = require("./key.js");
 var spotify = new Spotify(keys.spotify);
 var bandKey = keys.bandsintown.key;
 var omdbKey = keys.omdb.key;
-// console.log(spotify.credentials);
-// console.log(bandKey);
 
 var userCommand = process.argv[2];
 if (process.argv[3] != undefined) {
@@ -42,11 +38,10 @@ function concert() {
     userSearch +
     "/events?app_id=" +
     bandKey;
-  console.log(queryURL);
+  
   axios
     .get(queryURL)
     .then(function(response) {
-      // console.log(response.data);
       console.log(response.data[0].venue.name);
       var venueName = response.data[0].venue.name;
       var venueLocation =
@@ -74,7 +69,8 @@ function spotifyIt() {
     if (err) {
       return console.log("Error occurred: " + err);
     }
-    // console.log(data);
+    // End code from https://www.npmjs.com/package/node-spotify-api
+
     if (data.tracks.items.length > 0) {
       var originalArtists = [];
       for (var i = 0; i < data.tracks.items[0].artists.length; i++) {
@@ -110,8 +106,6 @@ function spotifyIt() {
         "Sorry, I don't recognize that song. Please try again, and make sure you've spelled it correctly!"
       );
     }
-
-    // End code from https://www.npmjs.com/package/node-spotify-api
   });
 }
 
@@ -123,7 +117,7 @@ function movie() {
     "http://www.omdbapi.com/?apikey=" + omdbKey + "&t=" + userSearch;
   axios.get(queryURL).then(function(response) {
     response = response.data;
-    // console.log(response);
+
     var title = response.Title;
     var released = response.Year;
     var IMDBrating = response.Ratings[0].Value;
